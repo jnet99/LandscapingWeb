@@ -55,11 +55,11 @@
     <div class="quote-card" id="quote">
       <h2>Get your free quote</h2>
       <p>No contracts. Flat pricing, quoted upfront.</p>
-      <form onsubmit="event.preventDefault(); alert('Thanks! This form is a placeholder — connect it to your email or CRM to go live.');">
+      <form id="quoteForm">
         <label for="name">Full name</label>
-        <input id="name" type="text" placeholder="John Doe" required>
+        <input id="name" type="text" placeholder="Jordan Lee" required>
         <label for="address">Property address</label>
-        <input id="address" type="text" placeholder="123 Main St, Foo, OK" required>
+        <input id="address" type="text" placeholder="123 Main St, Forney, TX" required>
         <label for="size">Approx. lot size</label>
         <select id="size">
           <option>Under 5,000 sq ft</option>
@@ -68,8 +68,9 @@
           <option>Over 20,000 sq ft</option>
         </select>
         <label for="phone">Phone number</label>
-        <input id="phone" type="tel" placeholder="(000) 000-0000" required>
-        <button class="btn btn-primary" type="submit" style="margin-top:6px;">Request my quote</button>
+        <input id="phone" type="tel" placeholder="(972) 555-0100" required>
+        <button class="btn btn-primary" type="submit" style="margin-top:6px;" id="quoteSubmitBtn">Request my quote</button>
+        <p id="quoteStatus" class="quote-status" aria-live="polite"></p>
       </form>
     </div>
   </div>
@@ -257,7 +258,7 @@
   </div>
 </section>
 
-  <section class="testimonial-band" id="reviews">
+<section class="testimonial-band" id="reviews">
   <div class="wrap">
     <blockquote>
       Reviews coming soon.
