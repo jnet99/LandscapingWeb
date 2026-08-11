@@ -3,11 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Lawn co. — Oklahoma Lawn Maintenance</title>
+<title>Lawn Co. — Oklahoma Lawn Maintenance</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 
 </head>
 <body>
@@ -19,81 +19,109 @@
         <path d="M13 25C13 25 4 19.5 4 12C4 6.5 8 2 13 2C18 2 22 6.5 22 12C22 19.5 13 25 13 25Z" stroke="#3FB57A" stroke-width="1.6"/>
         <path d="M13 6V20M13 10L9 7M13 14L17 11" stroke="#B6D94A" stroke-width="1.6" stroke-linecap="round"/>
       </svg>
-      Lawn co.
+      Lawn Co.
     </div>
     <div class="nav-links" id="navLinks">
+      <a href="#top">Home</a>
       <a href="#about">About</a>
-      <a href="#services">Services</a>
-      <a href="#pricing">Pricing</a>
+      <a href="#work">Services</a>
       <a href="#faq">FAQ</a>
       <a href="#reviews">Reviews</a>
     </div>
     <div class="nav-right">
-      <a class="btn btn-ghost" href="tel:+10000000000">(000) 000-0000</a>
+      <a class="nav-phone" href="tel:+10000000000">(000) 000-0000</a>
+      <a class="btn btn-primary" href="#quote">Free Estimate</a>
       <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">☰</button>
     </div>
   </nav>
 </header>
 
-<section class="hero">
+<section class="hero" id="top">
   <div class="hero-glow" aria-hidden="true"></div>
   <div class="hero-glow-2" aria-hidden="true"></div>
-  <div class="wrap hero-grid">
-    <div>
-      <p class="eyebrow">Oklahoma· Weekly &amp; biweekly service</p>
-      <h1>Lawn care that shows up, <em>every single time.</em></h1>
-      <p class="lede">Mowing, edging, and seasonal cleanup for homeowners across Oklahoma. Same crew, same day, every visit. No surprises on the invoice.</p>
-      <div class="owner-blurb">
-        <div class="owner-photo"><span>Photo</span></div>
-        <div>
-          <p class="owner-name">Jose N.</p>
-          <p class="owner-role">Founder, Lawn co.</p>
-        </div>
+  <div class="wrap hero-content">
+    <p class="eyebrow">Oklahoma · Weekly &amp; biweekly service</p>
+    <h1>Lawn care that shows up, <em>every single time.</em></h1>
+    <p class="lede">Mowing, edging, and seasonal cleanup for homeowners across Oklahoma. Same crew, same day, every visit — no surprises on the invoice.</p>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="#quote">Get my free quote</a>
+    </div>
+    <div class="service-area">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s7-6.1 7-11.5A7 7 0 0 0 5 9.5C5 14.9 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>
+      <span>Serving Owasso and surrounding Oklahoma communities</span>
+    </div>
+    <div class="owner-blurb">
+      <div class="owner-photo"><span>Photo</span></div>
+      <div>
+        <p class="owner-name">Jose N.</p>
+        <p class="owner-role">Founder, Lawn Co.</p>
       </div>
     </div>
+  </div>
+</section>
 
-    <div class="quote-card" id="quote">
-      <h2>Get your free quote</h2>
-      <p>No contracts. Flat pricing, quoted upfront.</p>
+<section class="quote-section" id="quote">
+  <div class="wrap">
+    <div class="quote-card">
+      <p class="eyebrow" style="text-align:center;display:block;">Free quote</p>
+      <h2 style="text-align:center;">Tell us about your yard</h2>
+      <p style="text-align:center;">No contracts. Flat pricing, quoted upfront.</p>
       <form id="quoteForm">
-        <label for="name">Full name</label>
-        <input id="name" type="text" placeholder="Jordan Lee" required>
-        <label for="address">Property address</label>
-        <input id="address" type="text" placeholder="123 Main St, Forney, TX" required>
-        <label for="size">Approx. lot size</label>
-        <select id="size">
-          <option>Under 5,000 sq ft</option>
-          <option>5,000–10,000 sq ft</option>
-          <option>10,000–20,000 sq ft</option>
-          <option>Over 20,000 sq ft</option>
-        </select>
-        <label for="phone">Phone number</label>
-        <input id="phone" type="tel" placeholder="(972) 555-0100" required>
-        <button class="btn btn-primary" type="submit" style="margin-top:6px;" id="quoteSubmitBtn">Request my quote</button>
+        <div class="form-row">
+          <div>
+            <label for="name">Full name</label>
+            <input id="name" name="name" type="text" placeholder="Jordan Lee" required>
+          </div>
+          <div>
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" placeholder="jordan@email.com" required>
+          </div>
+        </div>
+        <label for="street">Street address</label>
+        <input id="street" name="street_address" type="text" placeholder="123 Main St, Owasso, OK" required>
+        <div class="form-row">
+          <div>
+            <label for="phone">Phone number</label>
+            <input id="phone" name="phone" type="tel" placeholder="(405) 555-0100" required>
+          </div>
+          <div>
+            <label for="size">Approx. lot size</label>
+            <select id="size" name="lot_size">
+              <option>Under 5,000 sq ft</option>
+              <option>5,000–10,000 sq ft</option>
+              <option>10,000–20,000 sq ft</option>
+              <option>Over 20,000 sq ft</option>
+            </select>
+          </div>
+        </div>
+        <label for="message">Tell us about the job</label>
+        <textarea id="message" name="message" placeholder="Anything we should know — overgrown areas, pets, gate codes, how often you'd like service, etc."></textarea>
+        <button class="btn btn-primary" type="submit" style="margin-top:6px;justify-content:center;" id="quoteSubmitBtn">Send Request</button>
+        <p class="call-note">or call <a href="tel:+10000000000">(000) 000-0000</a></p>
         <p id="quoteStatus" class="quote-status" aria-live="polite"></p>
       </form>
     </div>
   </div>
 </section>
 
-<section class="about" id="about">
+<section id="about" class="alt-bg">
   <div class="wrap about-grid">
     <div class="about-photo"><span>Owner photo</span></div>
     <div class="about-copy">
-      <p class="eyebrow">About us</p>
-      <h2>A new lawn care company, built the right way</h2>
-      <p>Lawn co. is just getting started in Oklahoma — but the standard is the same one we'd want for our own yard: show up on the day we said, cut it the way we said, and text you when it's done.</p>
+      <p class="eyebrow">About</p>
+      <h2>You get the owner, not a stranger</h2>
+      <p>Lawn Co. is just getting started in Oklahoma — but the standard is the same one we'd want for our own yard: show up on the day we said, cut it the way we said, and text you when it's done.</p>
       <p>We're keeping our first season small on purpose, so every customer gets the same crew and the same attention every visit.</p>
       <p class="owner-name">Jose N.</p>
       <p class="owner-role">Founder &amp; Operator</p>
+      <a class="about-learn-link" href="about.html">Learn more about us <span aria-hidden="true">→</span></a>
     </div>
   </div>
 </section>
 
-</section>
 <section id="before-after">
   <div class="wrap">
-    <div class="section-head">
+    <div class="section-head center">
       <p class="eyebrow">Before &amp; After</p>
       <h2>See the difference a real crew makes</h2>
       <p>A look at recent yards before we showed up, and after.</p>
@@ -101,7 +129,7 @@
     <div class="ba-grid">
       <div class="ba-card">
         <div class="ba-image"><span>Before photo</span></div>
-        <p class="ba-label">Before</p>
+        <p class="ba-label ba-label-before">Before</p>
       </div>
       <div class="ba-card">
         <div class="ba-image"><span>After photo</span></div>
@@ -111,113 +139,45 @@
   </div>
 </section>
 
-<section id="services">
+<section id="work" class="alt-bg">
   <div class="wrap">
     <div class="section-head">
       <p class="eyebrow">Services</p>
-      <h2>Everything your lawn needs, nothing it doesn't</h2>
+      <h2>Services We Provide</h2>
       <p>Pick a standalone service or bundle into a season-long plan — either way, it's the same reliable crew.</p>
     </div>
     <div class="service-grid">
       <div class="service-card">
+        <div class="service-photo"><span>Photo</span></div>
         <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 20h18M5 20V10l7-6 7 6v10"/><path d="M9 20v-6h6v6"/></svg>
         <h3>Mowing &amp; edging</h3>
         <p>Weekly or biweekly cuts at the right height for your grass type, with clean edges along beds, walks, and drives.</p>
       </div>
       <div class="service-card">
+        <div class="service-photo"><span>Photo</span></div>
         <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2v6M12 16v6M4.9 4.9l4.2 4.2M14.9 14.9l4.2 4.2M2 12h6M16 12h6M4.9 19.1l4.2-4.2M14.9 9.1l4.2-4.2"/></svg>
         <h3>Fertilization &amp; weed control</h3>
         <p>Seasonal treatments tuned to Oklahoma soil, keeping your lawn thick enough to crowd out weeds on its own.</p>
       </div>
       <div class="service-card">
+        <div class="service-photo"><span>Photo</span></div>
         <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 12l9-9 9 9M5 10v10h14V10"/></svg>
         <h3>Seasonal cleanup</h3>
         <p>Spring wake-up and fall leaf removal so your yard transitions between seasons without the extra work on you.</p>
       </div>
       <div class="service-card">
+        <div class="service-photo"><span>Photo</span></div>
         <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
         <h3>Aeration &amp; overseeding</h3>
         <p>Late-summer core aeration and overseeding to break up compacted clay and fill in thin patches before winter.</p>
       </div>
     </div>
   </div>
-
-
-<section id="pricing">
-  <div class="wrap">
-    <div class="section-head">
-      <p class="eyebrow">Pricing</p>
-      <h2>Simple, flat-rate pricing</h2>
-      <p>Based on average lot size. Get an exact number with the free quote form above — this is a starting guide.</p>
-    </div>
-    <div class="pricing-grid">
-      <div class="price-card">
-        <h3>Small Lot</h3>
-        <div class="price">$-<span>/visit</span></div>
-        <p class="lot-note">Under 5,000 sq ft</p>
-        <ul>
-          <li>Mowing &amp; edging</li>
-          <li>Blowing off walks &amp; drive</li>
-          <li>Biweekly or weekly</li>
-        </ul>
-        <a class="btn btn-ghost" href="#quote">Get this quote</a>
-      </div>
-      <div class="price-card popular">
-        <span class="tag">Most common</span>
-        <h3>Medium Lot</h3>
-        <div class="price">$-<span>/visit</span></div>
-        <p class="lot-note">5,000–10,000 sq ft</p>
-        <ul>
-          <li>Mowing &amp; edging</li>
-          <li>Blowing off walks &amp; drive</li>
-          <li>Trim around beds &amp; fence lines</li>
-          <li>Weekly or biweekly</li>
-        </ul>
-        <a class="btn btn-primary" href="#quote">Get this quote</a>
-      </div>
-      <div class="price-card">
-        <h3>Large Lot</h3>
-        <div class="price">$-<span>/visit</span></div>
-        <p class="lot-note">10,000–20,000+ sq ft</p>
-        <ul>
-          <li>Everything in Medium</li>
-          <li>Extra trim time for large beds</li>
-          <li>Priority scheduling</li>
-        </ul>
-        <a class="btn btn-ghost" href="#quote">Get this quote</a>
-      </div>
-    </div>
-  </div>
 </section>
-
-<section id="process">
-  <div class="wrap">
-    <div class="section-head">
-      <p class="eyebrow">How it works</p>
-      <h2>From first call to first mow, in three steps</h2>
-    </div>
-    <div class="process-list">
-      <div class="step">
-        <div class="step-num"></div>
-        <div><h3>Request a quote</h3><p>Fill out the form above with your address and lot size. We'll text back a flat price — usually within a few hours.</p></div>
-      </div>
-      <div class="step">
-        <div class="step-num"></div>
-        <div><h3>Walkthrough &amp; plan</h3><p>A crew lead walks the property, flags anything unusual, and locks in your recurring day.</p></div>
-      </div>
-      <div class="step">
-        <div class="step-num"></div>
-        <div><h3>Consistent care, every visit</h3><p>Same crew, same route day. You get a text when the crew arrives and when they're done.</p></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
 
 <section class="faq" id="faq">
   <div class="wrap">
-    <div class="section-head">
+    <div class="section-head center">
       <p class="eyebrow">Q&amp;A</p>
       <h2>Common questions</h2>
     </div>
@@ -228,15 +188,11 @@
       </details>
       <details class="faq-item">
         <summary>What areas do you service?</summary>
-        <p>We're currently serving Oklahoma. Contact us to confirm your address is in range.</p>
+        <p>We proudly serve Owasso and the surrounding areas, including Tulsa, Broken Arrow, Claremore, Collinsville, and Skiatook. Contact us to confirm your address is in range.</p>
       </details>
       <details class="faq-item">
         <summary>What's included in a standard mow?</summary>
-        <p>Mowing, edging along hard surfaces, and blowing off walks, drives, and porches. Bed trimming is included on select plans — see the pricing section above.</p>
-      </details>
-      <details class="faq-item">
-        <summary>What's included in a standard mow?</summary>
-        <p>Mowing, edging along hard surfaces, and blowing off walks, drives, and porches. Bed trimming is included on select plans — see the pricing section above.</p>
+        <p>Mowing, edging along hard surfaces, and blowing off walks, drives, and porches. Bed trimming is included on select plans.</p>
       </details>
       <details class="faq-item">
         <summary>Do you offer one-time yard cleanups?</summary>
@@ -252,7 +208,7 @@
       </details>
       <details class="faq-item">
         <summary>What payment methods do you accept?</summary>
-        <p>We accept all major credit cards, debit cards, zelle, Cash App, and PayPal.</p>
+        <p>We accept all major credit cards, debit cards, Zelle, Cash App, and PayPal.</p>
       </details>
     </div>
   </div>
@@ -274,7 +230,7 @@
       <h2>Get your lawn on the schedule</h2>
       <p>Fill out the quote form and we'll text back a flat price — usually within a few hours.</p>
     </div>
-    <a class="btn btn-primary" href="#quote">Get my free quote</a>
+    <a class="btn btn-primary" href="#quote">Get my free estimate</a>
   </div>
 </section>
 
@@ -282,13 +238,13 @@
   <div class="wrap">
     <div class="footer-grid">
       <div class="footer-col">
-        <h4>Lawn co.</h4>
-        <p>Serving Oklahoma communities.</p>
+        <h4>Lawn Co.</h4>
+        <p>Serving Owasso, Tulsa, Broken Arrow, Claremore, Collinsville, Skiatook, and surrounding Oklahoma communities.</p>
       </div>
       <div class="footer-col">
         <h4>Contact</h4>
         <a href="tel:+10000000000">(000) 000-0000</a>
-        <a href="mailto:hello@lawn.co">hello@lawn.co</a>
+        <a href="mailto:hello@lawnco.co">hello@lawnco.co</a>
       </div>
       <div class="footer-col">
         <h4>Hours</h4>
@@ -297,23 +253,39 @@
       </div>
       <div class="footer-col">
         <h4>Site</h4>
-        <a href="#about">About</a>
-        <a href="#pricing">Pricing</a>
+        <a href="#quote">Free Quote</a>
+        <a href="#work">Services</a>
         <a href="#faq">FAQ</a>
-        <a href="#quote">Get a quote</a>
       </div>
     </div>
     <div class="footer-bottom">
-      <span>© 2026 Lawn co. All rights reserved.</span>
+      <span>© 2026 Lawn Co. All rights reserved.</span>
       <span>Placeholder content — replace with real business details.</span>
     </div>
   </div>
-
-  
 </footer>
 
-<script src="script.js"></script>
+<div class="quote-popup" id="quotePopup">
+  <button class="quote-popup-close" id="quotePopupClose" aria-label="Close">✕</button>
+  <h3>Ready for a free quote?</h3>
+  <p>Get a flat price for your lawn in under a minute.</p>
+  <a class="btn btn-primary" href="#quote" id="quotePopupCta">Get my free quote</a>
+</div>
 
+<div class="modal-overlay" id="quoteModalOverlay">
+  <div class="quote-modal" role="dialog" aria-modal="true" aria-labelledby="quoteModalTitle">
+    <button class="quote-modal-close" id="quoteModalClose" aria-label="Close">✕</button>
+    <div class="quote-modal-icon" aria-hidden="true">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+    </div>
+    <h2 id="quoteModalTitle">Request sent!</h2>
+    <p>Thanks — we've got your info and will reach out shortly.</p>
+    <button class="btn btn-primary" type="button" id="quoteModalOkBtn">Got it</button>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script src="script.js"></script>
 
 </body>
 </html>
